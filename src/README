@@ -1,0 +1,26 @@
+The program's purpose is to input student’s course completions (course name and course grade)
+into the system. This can be achieved by using, for example, HashMap, but also ArrayList,
+together with Grade.java, works well and is easily expandable. You can utilize the latter if
+HashMap does not feel familiar.
+The program can withhold information of 0 to N number of students, and students can have 0 to
+N amount of course completions.
+There is a separate functionality to save input and read input to or from files. In practice, the
+University.java class is responsible for writing students’ data structure to the file. The object
+withholds all the information, so the data is automatically written to the file. Hence, the
+Student.java class must serialized as well as the Grade class if that is included in the
+implementation.
+The Calculator can calculate both the average and median of the courses. In addition to this, the
+program can print out all the course completions that students have (see example output below).
+Calculator class must have the following functionality:
+• getAverageGrade(Student s) – returns the average of course completions as double. In
+case there are no completions, return 0.
+• getMedianGrade(Student s) – return the median of the course grades as double.
+• This can be best achieved by first sorting the data structure in order of magnitude
+and then returning the middle item.
+• You should perform the sorting for copy of the data structure to avoid possible
+changes on the original data structure.
+• If there is even number of course completions, class returns the average of the two
+middle items in the sorted list. In case there is no course completions, returns 0.
+Student class must have the following functionality:
+• addGrade(String course, int grade) – saves the course completion to the list.
+• getGrades() – Returns the course completions
